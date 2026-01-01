@@ -1,0 +1,150 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #f8eeff;
+}
+
+main {
+  padding-top: 8.156rem;
+  padding-bottom: 2rem;
+  background-image: url(../images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+@media (min-width: 768px) {
+  main {
+    background-image: url(../images/background-pattern-desktop.svg);
+    padding-top: 10.49rem;
+  }
+}
+
+.card {
+  max-width: 20.44rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 1.5rem 0;
+}
+@media (min-width: 768px) {
+  .card {
+    max-width: 37.5rem;
+    padding: 2.5rem 0;
+  }
+}
+
+.container {
+  max-width: 17.44rem;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 32.5rem;
+  }
+}
+
+.card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .card__title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.card__title img {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 768px) {
+  .card__title img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.accordion {
+  max-width: 20.44rem;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .accordion {
+    max-width: 32.5rem;
+  }
+}
+
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #f8eeff;
+}
+.accordion__item:last-child {
+  border-bottom: none;
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion__header:hover {
+  color: #ad28eb;
+}
+
+.accordion__header-question {
+  max-width: 14rem;
+  padding: 1.5rem 0;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .accordion__header-question {
+    max-width: 30rem;
+    line-height: 1.166;
+  }
+}
+
+.accordion__btn {
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24.38px;
+  height: 24.38px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.accordion__item.active .accordion__body {
+  max-height: 200px;
+}
+
+.accordion__body-answer {
+  color: #8b6990;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+}
